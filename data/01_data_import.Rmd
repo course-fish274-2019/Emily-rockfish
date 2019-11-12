@@ -1,0 +1,8 @@
+---
+title: "01-data-import"
+output: html_document
+---
+
+```{r raw_data}
+rockfish_larval_data <- read.csv("../data/rsos170639_si_001.csv")
+```

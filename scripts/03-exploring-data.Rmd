@@ -1,0 +1,100 @@
+---
+title: "03-exploring-data"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r raw_data}
+rockfish_larval_data <- read.csv("../data/rsos170639_si_001.csv")
+
+colnames(rockfish_larval_data)
+```
+
+# question
+
+Columns X-BK show adjusted fish abundance. The other columns show environmental factors. I want to test how different environmental factors may change fish abundance
+
+
+
+```{r}
+ggplot(rockfish_larval_data, aes(x = sal_100m, y = hopkinsi)) +
+  geom_point(size = 3, color = "blue", alpha = 0.5)
+```
+
+
+```{r}
+ggplot(rockfish_larval_data, aes(x = temp_surf)) +
+  geom_histogram(bins = 100) 
+```
+
+
+
+
+```{r}
+ggplot(rockfish_larval_data, aes(x = sal_100m, y = hopkinsi)) +
+  geom_point(size = 3, color = "blue", alpha = 0.5)
+```
+
+
+
+
+```{r}
+ggplot(rockfish_larval_data, aes(x = sal_100m, y = auriculatus)) +
+  geom_point(size = 3, color = "blue", alpha = 0.5) 
+
+```
+
+
+```{r}
+ggplot(rockfish_larval_data, aes(x = sal_100m, y = jordani)) +
+  geom_point(size = 3, color = "blue", alpha = 0.5) +
+  scale_y_log10()
+
+```
+
+
+
+```{r}
+ggplot(rockfish_larval_data, aes(x = sal_100m, y = jordani)) +
+  geom_point(size = 2, color = "blue", alpha = 0.5) +
+  scale_y_log10() +
+  facet_wrap(~year)
+
+```
+
+
+
+
+
+```{r}
+ggplot(rockfish_larval_data, aes(x = oxygen_100m, y = jordani)) +
+  geom_point(size = 3, color = "green", alpha = 0.5)
+```
+
+```{r}
+ggplot(rockfish_larval_data) +
+  geom_point(aes(x = oxygen_100m, y = jordani), color = "gray") +
+  geom_point(aes(x = oxygen_100m, y = elongatus), color = "green", alpha = 0.5) +
+  geom_point(aes(x = oxygen_100m, y = ensifer), color = "blue", alpha = 0.5) +
+   geom_point(aes(x = oxygen_100m, y = flavidus), color = "pink", alpha = 0.5) +
+  scale_y_log10()
+  
+
+```
+
+```{r}
+
+ggplot(rockfish_larval_data) +
+  geom_point(aes(x = oxygen_100m, y = jordani), color = "gray") +
+  geom_point(aes(x = oxygen_100m, y = elongatus), color = "green", alpha = 0.5) +
+  geom_point(aes(x = oxygen_100m, y = ensifer), color = "blue", alpha = 0.5) +
+   geom_point(aes(x = oxygen_100m, y = flavidus), color = "pink", alpha = 0.5) +
+  scale_y_log10() +
+  facet_wrap(~station)
+  
+
+```
+

@@ -37,9 +37,6 @@ ggplot(rockfish_larval_data, aes(x = station.depth, y = temp_surf)) +
 ```
 
 
-```{r}
-
-```
 
 
 

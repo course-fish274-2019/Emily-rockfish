@@ -11,20 +11,17 @@ library(ggplot2)
 ```
 
 
+#Mini Project: cleaning raw data
+#select column by name 
 
+```{r}
+cleaned_data <- select(rockfish_larval_data, year, line, station, station.depth, temp_surf, sal_surf, oxygen_surf, auriculatus, aurora,	caurinus,	chlorostictus,	constellatus,crameri,	crocotulus,	dalli,	did.not.work,	diploproa,	elongatus,	ensifer,	entomelas,	flavidus,	gilli,	goodei, helvomaculatus,	hopkinsi,	jordani,	levis,	macdonaldi,	melanostomus,	miniatus,	moseri,	mystinus,	ovalis,	paucispinis)
+```
 
 
 ```{r}
-ggplot (rockfish_larval_data) +
-  geom_point(aes(x = oxygen_100m, y = moseri), color = "gray") +
-  geom_point(aes(x = oxygen_100m, y = ovalis), color = "green", alpha = 0.5) +
-  geom_point(aes(x = oxygen_100m, y = crameri), color = "blue", alpha = 0.5) +
-   geom_point(aes(x = oxygen_100m, y = ensifer), color = "pink", alpha = 0.5) +
-  scale_y_log10() +
-  labs(x = "Oxygen per 100m" , y = "Adjusted Abundance Rate", 
-       title = "Oxygen Concentration vs Rockfish Abundance") 
-
-
+cleaned_data %>%
+  gather('auriculatus', 'aurora',	'caurinus',	'chlorostictus',	'constellatus', 'crameri',	'crocotulus',	'dalli',	'did.not.work',	'diploproa',	'elongatus',	'ensifer',	'entomelas',	'flavidus',	'gilli',	'goodei', 'helvomaculatus',	'hopkinsi',	'jordani',	'levis',	'macdonaldi',	'melanostomus',	'miniatus',	'moseri',	'mystinus',	'ovalis',	'paucispinis', key = "genus", value = "counts")
 ```
 
 
@@ -32,20 +29,8 @@ ggplot (rockfish_larval_data) +
 
 
 
-```{r}
-ggplot(rockfish_larval_data, aes(x = station.depth, y = temp_surf)) +
-  geom_point()
-
-```
 
 
-```{r}
-library(tidyverse)
-```
 
-```{r}
-
-```
- Header 
 
 

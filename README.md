@@ -1,1 +1,1 @@
-# Emily-rockfish
+Purpose: The purpose of the mini project is to demonstrate the skills we have learned in this class. 

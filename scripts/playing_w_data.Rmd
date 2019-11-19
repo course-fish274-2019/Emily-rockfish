@@ -8,6 +8,7 @@ output: html_document
 library(dplyr)
 help(package = dplyr)
 library(ggplot2)
+library(tidyr)
 ```
 
 
@@ -15,16 +16,19 @@ library(ggplot2)
 #select column by name 
 
 ```{r}
-cleaned_data <- select(rockfish_larval_data, year, line, station, station.depth, temp_surf, sal_surf, oxygen_surf, auriculatus, aurora,	caurinus,	chlorostictus,	constellatus,crameri,	crocotulus,	dalli,	did.not.work,	diploproa,	elongatus,	ensifer,	entomelas,	flavidus,	gilli,	goodei, helvomaculatus,	hopkinsi,	jordani,	levis,	macdonaldi,	melanostomus,	miniatus,	moseri,	mystinus,	ovalis,	paucispinis)
+rockfish_data_reduced <- select(rockfish_larval_data, year, line, station, station.depth, temp_surf, sal_surf, oxygen_surf, auriculatus, aurora,	caurinus,	chlorostictus,	constellatus,crameri,	crocotulus,	dalli,	did.not.work,	diploproa,	elongatus,	ensifer,	entomelas,	flavidus,	gilli,	goodei, helvomaculatus,	hopkinsi,	jordani,	levis,	macdonaldi,	melanostomus,	miniatus,	moseri,	mystinus,	ovalis,	paucispinis)
 ```
 
 
 ```{r}
-cleaned_data %>%
+rockfish_data_genus_colunm <- rockfish_data_reduced %>%
   gather('auriculatus', 'aurora',	'caurinus',	'chlorostictus',	'constellatus', 'crameri',	'crocotulus',	'dalli',	'did.not.work',	'diploproa',	'elongatus',	'ensifer',	'entomelas',	'flavidus',	'gilli',	'goodei', 'helvomaculatus',	'hopkinsi',	'jordani',	'levis',	'macdonaldi',	'melanostomus',	'miniatus',	'moseri',	'mystinus',	'ovalis',	'paucispinis', key = "genus", value = "counts")
 ```
 
 
+```{r}
+
+```
 
 
 

@@ -12,6 +12,8 @@ library(ggplot2)
 
 
 
+
+
 ```{r}
 ggplot (rockfish_larval_data) +
   geom_point(aes(x = oxygen_100m, y = moseri), color = "gray") +
@@ -37,7 +39,13 @@ ggplot(rockfish_larval_data, aes(x = station.depth, y = temp_surf)) +
 ```
 
 
+```{r}
+library(tidyverse)
+```
 
+```{r}
+
+```
 
 
 

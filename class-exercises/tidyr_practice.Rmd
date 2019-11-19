@@ -1,0 +1,31 @@
+---
+title: "tidyr"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+genes_wide = data.frame(
+  name = c("A", "B", "C"),
+  a = c("16-Y", "25-N", "13-Y"),
+  t = c("1-N", "12-Y", "31-Y")
+)
+```
+
+```{r}
+genes_long = genes_wide %>%
+  gather(base, base_counts, a:t)
+```
+
+```{r}
+genes = genes_long %>%
+  separate(base_counts, c("counts", "sequence"), sep = "-")
+```
+

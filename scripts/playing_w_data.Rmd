@@ -21,16 +21,22 @@ rockfish_data_reduced <- select(rockfish_larval_data, year, line, station, stati
 
 
 ```{r}
-rockfish_data_genus_colunm <- rockfish_data_reduced %>%
+rockfish_data_added_genus <- rockfish_data_reduced %>%
   gather('auriculatus', 'aurora',	'caurinus',	'chlorostictus',	'constellatus', 'crameri',	'crocotulus',	'dalli',	'did.not.work',	'diploproa',	'elongatus',	'ensifer',	'entomelas',	'flavidus',	'gilli',	'goodei', 'helvomaculatus',	'hopkinsi',	'jordani',	'levis',	'macdonaldi',	'melanostomus',	'miniatus',	'moseri',	'mystinus',	'ovalis',	'paucispinis', key = "genus", value = "counts")
+```
+
+
+```{r}
+ggplot(rockfish_data_added_genus, aes(x=oxygen_surf)) +
+   geom_histogram(fill="blue", alpha = 0.3) +
+   labs(x = "Temp (C)") +
+   facet_wrap(~genus)
 ```
 
 
 ```{r}
 
 ```
-
-
 
 
 

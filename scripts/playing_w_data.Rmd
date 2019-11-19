@@ -1,5 +1,6 @@
 ---
 title: "playing_w_data"
+author: Emily Schwabe
 output: html_document
 ---
 
@@ -12,7 +13,10 @@ library(tidyr)
 ```
 
 
-#Mini Project: cleaning raw data
+#Mini Project: Rockfish Larval Analysis 
+
+
+
 #select column by name 
 
 ```{r}
@@ -27,7 +31,7 @@ rockfish_data_added_genus <- rockfish_data_reduced %>%
 
 
 ```{r}
-ggplot(rockfish_data_added_genus, aes(x=oxygen_surf)) +
+ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    geom_histogram(fill="blue", alpha = 0.3) +
    labs(x = "Temp (C)") +
    facet_wrap(~genus)

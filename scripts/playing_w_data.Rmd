@@ -5,7 +5,9 @@ output: html_document
 ---
 
 
-
+```{r raw_data}
+rockfish_larval_data <- read.csv("../data/rsos170639_si_001.csv")
+```
 
 #Mini Project: Rockfish Larval Analysis 
 This project will compare multiple rockfish larval genusus across a variety of environmental factors such as temperature, oxygen, salinty, year, station and station depth. 
@@ -53,7 +55,7 @@ ggplot(rockfish_data_added_genus, aes(x = sal_surf, y = counts, color=genus)) +
 
 
 
-
+## Rockfish Larval Abundance and Environmental Conditions 
 
 
 

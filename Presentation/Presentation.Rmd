@@ -1,20 +1,37 @@
+---
+title: "Mini Project"
+output: ioslides_presentation
+```{r}
+library(dplyr)
+help(package = dplyr)
+library(ggplot2)
+library(tidyr)
+```
+---
 
 
 ## Rockfish Larval Abundance and Environmental Conditions 
  
 ![rockfish swimming](https://media.npr.org/assets/img/2015/02/06/rockfish_slide-f01ca2078dd1480dbf5039668186862008118fcf-s800-c85.jpg)
-echo hides code 
+
+
 
 ## Overview on Data 
 
 -16 years of data
 
+
 -rockfish were historically targeted by fishing 
+
 
 -rockfish abundance increased after implementation of large MPA
 
 ## Importing the Data 
+Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.
 
+This is the code you use to import.
 ```{r raw_data}
 rockfish_larval_data <- read.csv("../data/rsos170639_si_001.csv")
 ```
+
+

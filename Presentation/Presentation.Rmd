@@ -68,8 +68,10 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 ```
 
 
+## Check Out Some Fishies 
 
 
+![fishswimming](https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif)
 
 
 

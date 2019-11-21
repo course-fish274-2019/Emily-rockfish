@@ -1,13 +1,9 @@
 ---
 title: "Mini Project"
 output: ioslides_presentation
-```{r}
-library(dplyr)
-help(package = dplyr)
-library(ggplot2)
-library(tidyr)
-```
 ---
+
+
 
 
 ## Rockfish Larval Abundance and Environmental Conditions 
@@ -17,6 +13,17 @@ library(tidyr)
 
 
 ## Overview on Data 
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  echo=FALSE
+)
+```
+```{r, include=FALSE}
+library(dplyr)
+help(package = dplyr)
+library(ggplot2)
+library(tidyr)
+```
 
 -16 years of data
 
@@ -29,9 +36,15 @@ library(tidyr)
 ## Importing the Data 
 Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.
 
-This is the code you use to import.
+This is the code you use to import. 
+
 ```{r raw_data}
 rockfish_larval_data <- read.csv("../data/rsos170639_si_001.csv")
 ```
 
+Then I reorganized some of the data.
+
+```{r}
+rockfish_data_reduced <- select(rockfish_larval_data, year, line, station, station.depth, temp_surf, sal_surf, oxygen_surf, auriculatus, aurora,	caurinus,	chlorostictus,	constellatus,crameri,	crocotulus,	dalli,	did.not.work,	diploproa,	elongatus,	ensifer,	entomelas,	flavidus,	gilli,	goodei, helvomaculatus,	hopkinsi,	jordani,	levis,	macdonaldi,	melanostomus,	miniatus,	moseri,	mystinus,	ovalis,	paucispinis)
+```
 

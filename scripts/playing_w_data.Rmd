@@ -5,6 +5,15 @@ output: html_document
 ---
 
 
+
+
+#Mini Project: Rockfish Larval Analysis 
+This project will compare multiple rockfish larval genusus across a variety of environmental factors such as temperature, oxygen, salinty, year, station and station depth. 
+
+
+
+
+#Required Packages
 ```{r}
 library(dplyr)
 help(package = dplyr)
@@ -12,10 +21,7 @@ library(ggplot2)
 library(tidyr)
 ```
 
-
-#Mini Project: Rockfish Larval Analysis 
-
-
+#Import data in 
 
 #select column by name 
 
@@ -39,7 +45,10 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 
 
 ```{r}
-
+ggplot(rockfish_data_added_genus, aes(x = sal_surf, y = counts, color=genus)) +
+  geom_point() +
+  labs(x = "salinity level at surface" , y = "fish counts", 
+       title = "Salinty Affect on Fish Count")
 ```
 
 

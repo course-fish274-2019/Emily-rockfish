@@ -1,5 +1,7 @@
 ---
 title: "Mini Project"
+author: "Emily Schwabe"
+date: "11/20/19"
 output: ioslides_presentation
 ---
 
@@ -71,7 +73,7 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 ## Check Out Some Fishies 
 
 
-![fishswimming](https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif)
+![keepswimming](https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif)
 
 
 

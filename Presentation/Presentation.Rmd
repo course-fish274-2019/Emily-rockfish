@@ -28,16 +28,20 @@ library(ggplot2)
 library(tidyr)
 ```
 
--16 years of data
+-A total of 16 years of data collected along Californian Coast.
 
 
--rockfish were historically targeted by fishing 
+-Rockfish were historically targeted by fishing for many years. 
 
 
--rockfish abundance increased after implementation of large MPA
+-Rockfish abundance increased after implementation of large MPA. 
+
+![rockfish](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg) 
 
 ## Importing the Data 
 Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.There are about 10,000 pieces of data in the raw data set. Some of the descriptive factors were not needed for the analysis and were cut out using dplyr. A new column was added using knitr to combine species into a genus column. The new data set is shown here: 
+
+## Data Table 
 
 ```{r raw_data}
 rockfish_larval_data <- read.csv("../data/rsos170639_si_001.csv")
@@ -75,7 +79,7 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 
 
 ## Layered Histogram of Accumulation of Rockfish Species by Surface Temp and Temp at 100 meters
-```{r, echo=TRUE}
+```{r}
 ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
    labs(x = "Temp (C)") +
@@ -86,8 +90,19 @@ Red: Abundance at 100 meters
 Blue: Abundance at Surface
 
 An interesting point is that abundances are the same in areas, even though temperatures are different. 
-
-
+## The Code for Histograms 
+ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
+   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
+   labs(x = "Temp (C)") +
+   facet_wrap(~genus) 
+   
+ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
+   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
+   labs(x = "Temp (C)") +
+   facet_wrap(~genus) +
+  geom_histogram(aes(x=temp_100m), fill="red", alpha = 0.3, bins = 50)
+   
+   
 ## Histogram of Accumulation of Rockfish Species by Salinity
 ```{r, echo=TRUE}
 ggplot(rockfish_data_added_genus, aes(x=sal_surf)) +

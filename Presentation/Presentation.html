@@ -9,7 +9,7 @@
 
 
 
-  <meta name="date" content="2019-11-20" />
+  <meta name="date" content="2019-12-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -3116,7 +3116,7 @@ slide:not(.current) .plotly.html-widget{
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">11/20/19</p>
+            <p style="margin-top: 6px; margin-left: -2px;">12/10/19</p>
           </hgroup>
   </slide>
 
@@ -3207,6 +3207,11 @@ slide:not(.current) .plotly.html-widget{
 </table>
 
 </article></slide><slide class=""><hgroup><h2>Histogram of Accumulation of Rockfish Species by Surface Temperature</h2></hgroup><article  id="histogram-of-accumulation-of-rockfish-species-by-surface-temperature">
+
+<pre class = 'prettyprint lang-r'>ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
+   geom_histogram(fill=&quot;blue&quot;, alpha = 0.3) +
+   labs(x = &quot;Temp (C)&quot;) +
+   facet_wrap(~genus)</pre>
 
 <pre >## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</pre>
 

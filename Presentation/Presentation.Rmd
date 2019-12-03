@@ -63,14 +63,32 @@ knitr::kable(
 
 
 ## Histogram of Accumulation of Rockfish Species by Surface Temperature
+
+
+```{r}
+ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
+   geom_histogram(fill="blue", alpha = 0.3, bins = 20) +
+   labs(x = "Temp (C)") +
+   facet_wrap(~genus) 
+  
+```
+
+
+## Layered Histogram of Accumulation of Rockfish Species by Surface Temp and Temp at 100 meters
 ```{r, echo=TRUE}
 ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    geom_histogram(fill="blue", alpha = 0.3) +
    labs(x = "Temp (C)") +
-   facet_wrap(~genus)
+   facet_wrap(~genus) +
+  geom_histogram(aes(x=temp_100m), fill="red", alpha = 0.3)
 ```
+Red: Abundance at 100 meters
+Blue: Abundance at Surface
 
-#Histogram of Accumulation of Rockfish Species by Salinity
+An interesting point is that abundances are the same in areas, even though temperatures are different. 
+
+
+## Histogram of Accumulation of Rockfish Species by Salinity
 ```{r, echo=TRUE}
 ggplot(rockfish_data_added_genus, aes(x=sal_surf)) +
    geom_histogram(fill="blue", alpha = 0.3) +

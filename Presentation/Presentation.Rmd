@@ -79,7 +79,7 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 
 
 ## Layered Histogram of Rockfish Species by Surface Temp and Temp at 100m
-```{r, width=80%}
+```{r}
 ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
    labs(x = "Temp (C)") +
@@ -107,7 +107,7 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 ## Histogram of Accumulation of Rockfish Species by Salinity
 ```{r, echo=TRUE}
 ggplot(rockfish_data_added_genus, aes(x=sal_surf)) +
-   geom_histogram(fill="blue", alpha = 0.3, bins = 10) +
+   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
    labs(x = "Salinity") +
    facet_wrap(~genus)
 ```

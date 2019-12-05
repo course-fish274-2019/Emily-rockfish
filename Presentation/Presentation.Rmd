@@ -32,20 +32,8 @@ library(tidyr)
 
 
 
-## Manipulation on Raw Data 
+## Raw Data/Manipulation
 Raw data orginally came from [Raw larval abundance and environmental data for Thompson et al.](https://figshare.com/articles/Raw_larval_abundance_and_environmental_data_for_Thompson_et_al_from_Larval_abundances_of_rockfishes_that_were_historically_targeted_by_fishing_increased_over_16_years_in_association_with_a_large_marine_protected_area/5394619) Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.There are about 10,000 pieces of data in the raw data set. Some of the descriptive factors were not needed for the analysis and were cut out using dplyr. A new column was added using knitr to combine species into a genus column. The new data set is shown here: 
-
-## Overview on Data
-
--A total of 16 years of data collected along Californian Coast.
-
-
--Rockfish were historically targeted by fishing for many years. 
-
-
--Rockfish abundance increased after implementation of large MPA. 
-
-![.](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=60%}
 
 
 
@@ -73,52 +61,72 @@ knitr::kable(
 )
 ```
 
+## Overview on Data
+-A total of 16 years of data collected along Californian Coast.
 
+-Rockfish were historically targeted by fishing for many years. 
+
+-Environmental factors consist of 
+
+    1)temperatures
+    2)salinities
+    3)oxygen concentration 
+
+![.](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=55%}
 
 ## Histogram of Accumulation of Rockfish Species by Surface Temperature
 
 
 ```{r}
 ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
-   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
+   geom_histogram(fill="red", alpha = 0.3, bins = 50) +
    labs(x = "Temp (C)") +
    facet_wrap(~genus) 
   
 ```
 
 
-## Layered Histogram of Rockfish Species by Surface Temp and Temp at 100m
+## Rockfish at Surface Temp and Temp at 100m
 ```{r}
 ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
-   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
+   geom_histogram(fill="red", alpha = 0.3, bins = 50) +
    labs(x = "Temp (C)") +
    facet_wrap(~genus) +
-  geom_histogram(aes(x=temp_100m), fill="red", alpha = 0.3, bins = 50)
+  geom_histogram(aes(x=temp_100m), fill="blue", alpha = 0.3, bins = 50)
 ```
-Red: Abundance at 100 meters
-Blue: Abundance at Surface
+Blue: 100 meters deep
+Red: surface 
  
  
-## The Code for Histograms 
+## Rockfish at Surface Salinity and Salinity at 100m
 
-ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
-   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
-   labs(x = "Temp (C)") +
-   facet_wrap(~genus) 
-   
-ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
-   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
-   labs(x = "Temp (C)") +
-   facet_wrap(~genus) +
-  geom_histogram(aes(x=temp_100m), fill="red", alpha = 0.3, bins = 50)
-   
-   
-## Histogram of Accumulation of Rockfish Species by Salinity
 ```{r}
 ggplot(rockfish_data_added_genus, aes(x=sal_surf)) +
-   geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
-   labs(x = "Salinity")
+   geom_histogram(fill="red", alpha = 0.3, bins = 50) +
+   labs(x = "Salinity") +
+   facet_wrap(~genus) +
+  geom_histogram(aes(x=sal_100m), fill="blue", alpha = 0.3, bins = 50)
 ```
+
+
+## Rockfish at Surface O2 Concentration and O2 Concentration at 100m 
+```{r}
+ggplot(rockfish_data_added_genus, aes(x=oxygen_surf)) +
+   geom_histogram(fill="red", alpha = 0.3, bins = 50) +
+   labs(x = "Oxygen") +
+   facet_wrap(~genus) +
+  geom_histogram(aes(x=oxygen_100m), fill="blue", alpha = 0.3, bins = 50)
+```
+
+## The Code for Histograms 
+
+   
+ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
+   geom_histogram(fill="red", alpha = 0.3, bins = 50) +
+   labs(x = "Temp (C)") +
+   facet_wrap(~genus) +
+  geom_histogram(aes(x=temp_100m), fill="blue", alpha = 0.3, bins = 50)
+   
 
 
 ## Thank you!

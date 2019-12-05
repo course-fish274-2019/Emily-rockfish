@@ -82,17 +82,19 @@ knitr::kable(
 
 
 ## Overview on Data
--A total of 16 years of data collected along Californian Coast.
+~A total of 16 years of data collected along Californian Coast.
 
--Rockfish were historically targeted by fishing for many years. 
+~Rockfish were historically targeted by fishing for many years. 
 
--Environmental factors consist of 
+~Environmental factors consist of 
 
-    1)temperatures
-    2)salinities
-    3)oxygen concentration 
+    -temperatures ![](https://scx1.b-cdn.net/csz/news/800/2018/temperature.jpg){width=15%}
+    
+    -salinities ![](https://images.wagwalkingweb.com/media/articles/dog/salt-poisoning/salt-poisoning.jpg){width=15%}
+    
+    -oxygen concentration ![](https://visualisingdata.com/wp-content/uploads/2010/03/O2-bubbles.jpg){width=15%}
 
-![.](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=55%}
+
 
 
 
@@ -137,7 +139,7 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    facet_wrap(~genus) +
   geom_histogram(aes(x=temp_100m), fill="blue", alpha = 0.3, bins = 50)
    
-
+![](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=55%} 
 
 ## Thank you!
 ### Any Questions? 

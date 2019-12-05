@@ -3640,15 +3640,17 @@ auriculatus
 
 </article></slide><slide class=""><hgroup><h2>Overview on Data</h2></hgroup><article  id="overview-on-data">
 
-<p>-A total of 16 years of data collected along Californian Coast.</p>
+<p>~A total of 16 years of data collected along Californian Coast.</p>
 
-<p>-Rockfish were historically targeted by fishing for many years.</p>
+<p>~Rockfish were historically targeted by fishing for many years.</p>
 
-<p>-Environmental factors consist of</p>
+<p>~Environmental factors consist of</p>
 
-<p>1)temperatures 2)salinities 3)oxygen concentration</p>
+<p>-temperatures <img width="15%" src='https://scx1.b-cdn.net/csz/news/800/2018/temperature.jpg' title=''/></p>
 
-<img width="55%" src='https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg' title='fig:'/><p class='caption'>.</p>
+<p>-salinities <img width="15%" src='https://images.wagwalkingweb.com/media/articles/dog/salt-poisoning/salt-poisoning.jpg' title=''/></p>
+
+<p>-oxygen concentration <img width="15%" src='https://visualisingdata.com/wp-content/uploads/2010/03/O2-bubbles.jpg' title=''/></p>
 
 </article></slide><slide class=""><hgroup><h2>Rockfish at Surface Temp and Temp at 100m</h2></hgroup><article  id="rockfish-at-surface-temp-and-temp-at-100m">
 
@@ -3665,6 +3667,8 @@ auriculatus
 </article></slide><slide class=""><hgroup><h2>The Code for Histograms</h2></hgroup><article  id="the-code-for-histograms">
 
 <p>ggplot(rockfish_data_added_genus, aes(x=temp_surf)) + geom_histogram(fill=&ldquo;red&rdquo;, alpha = 0.3, bins = 50) + labs(x = &ldquo;Temp (C)&rdquo;) + facet_wrap(~genus) + geom_histogram(aes(x=temp_100m), fill=&ldquo;blue&rdquo;, alpha = 0.3, bins = 50)</p>
+
+<img width="55%" src='https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg' title=''/>
 
 </article></slide><slide class=""><hgroup><h2>Thank you!</h2></hgroup><article  id="thank-you">
 

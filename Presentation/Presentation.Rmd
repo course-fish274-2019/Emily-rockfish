@@ -10,15 +10,21 @@ output: ioslides_presentation
 
 ## Rockfish Larval Abundance and Environmental Conditions 
  
-![..](https://media.npr.org/assets/img/2015/02/06/rockfish_slide-f01ca2078dd1480dbf5039668186862008118fcf-s800-c85.jpg){width=90%}
+![](https://media.npr.org/assets/img/2015/02/06/rockfish_slide-f01ca2078dd1480dbf5039668186862008118fcf-s800-c85.jpg){width=90%}
 
-
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  echo=FALSE
+)
+```
 
 ## Importing Packages
 1) dplyr
 2) ggplot2
 3) tidyr
 4) kableExtra
+
+![](https://cdn.onlinewebfonts.com/svg/img_70093.png){width=45%}
 
 
 ```{r, include=FALSE}
@@ -68,6 +74,7 @@ knitr::kable(
   rockfish_data_added_genus[1:5, ], 
   caption = "Rockfish Data Table"
 ) %>%
+  kable_styling(c("striped", "hover", "condensed", "responsive")) %>%
   scroll_box(width = "100%")
 ```
 
@@ -136,7 +143,7 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 ### Any Questions? 
 
 
-![:)](https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif)
+![](https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif){width=100%}
 
 
 

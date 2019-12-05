@@ -74,16 +74,6 @@ knitr::kable(
 
 ![.](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=55%}
 
-## Histogram of Accumulation of Rockfish Species by Surface Temperature
-
-
-```{r}
-ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
-   geom_histogram(fill="red", alpha = 0.3, bins = 50) +
-   labs(x = "Temp (C)") +
-   facet_wrap(~genus) 
-  
-```
 
 
 ## Rockfish at Surface Temp and Temp at 100m

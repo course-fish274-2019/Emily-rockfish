@@ -38,11 +38,13 @@ library(tidyr)
 
 ![.](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=60%}
 
-## Importing 
-### Packages
+## Importing Packages
 dplyr, ggplot2, tidyr
-#### Manipulation on Raw Data 
-Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.There are about 10,000 pieces of data in the raw data set. Some of the descriptive factors were not needed for the analysis and were cut out using dplyr. A new column was added using knitr to combine species into a genus column. The new data set is shown here: 
+
+
+
+## Manipulation on Raw Data 
+Raw data orginally came from [Raw larval abundance and environmental data for Thompson et al.](https://figshare.com/articles/Raw_larval_abundance_and_environmental_data_for_Thompson_et_al_from_Larval_abundances_of_rockfishes_that_were_historically_targeted_by_fishing_increased_over_16_years_in_association_with_a_large_marine_protected_area/5394619) Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.There are about 10,000 pieces of data in the raw data set. Some of the descriptive factors were not needed for the analysis and were cut out using dplyr. A new column was added using knitr to combine species into a genus column. The new data set is shown here: 
 
 
 
@@ -69,6 +71,7 @@ knitr::kable(
   caption = "Rockfish Data Table"
 )
 ```
+
 
 
 ## Histogram of Accumulation of Rockfish Species by Surface Temperature
@@ -113,15 +116,15 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 ```{r}
 ggplot(rockfish_data_added_genus, aes(x=sal_surf)) +
    geom_histogram(fill="blue", alpha = 0.3, bins = 50) +
-   labs(x = "Salinity") +
-  geom_histogram(aes(x=temp_surf), fill="red", alpha = 0.3, bins = 50)+
-  geom_histogram(aes(x=oxygen_surf), fill="green", alpha = 0.3, bins = 50)
+   labs(x = "Salinity")
 ```
 
-## Check Out Some Fishies 
+
+## Thank you!
+### Any Questions? 
 
 
-![thank you](https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif)
+![:)](https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif)
 
 
 

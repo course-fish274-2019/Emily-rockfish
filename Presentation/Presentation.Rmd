@@ -15,7 +15,11 @@ output: ioslides_presentation
 
 
 ## Importing Packages
-dplyr, ggplot2, tidyr
+1) dplyr
+2) ggplot2
+3) tidyr
+4) kableExtra
+
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
@@ -28,8 +32,13 @@ library(dplyr)
 help(package = dplyr)
 library(ggplot2)
 library(tidyr)
+
 ```
 
+```{r}
+
+library(kableExtra)
+```
 
 
 ## Raw Data/Manipulation
@@ -58,8 +67,12 @@ rockfish_data_added_genus <- rockfish_data_reduced %>%
 knitr::kable(
   rockfish_data_added_genus[1:5, ], 
   caption = "Rockfish Data Table"
-)
+) %>%
+  scroll_box(width = "100%")
 ```
+
+
+
 
 ## Overview on Data
 -A total of 16 years of data collected along Californian Coast.

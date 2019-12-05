@@ -14,7 +14,9 @@ output: ioslides_presentation
 
 
 
-## Overview on Data 
+## Importing Packages
+dplyr, ggplot2, tidyr
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   echo=FALSE
@@ -28,6 +30,13 @@ library(ggplot2)
 library(tidyr)
 ```
 
+
+
+## Manipulation on Raw Data 
+Raw data orginally came from [Raw larval abundance and environmental data for Thompson et al.](https://figshare.com/articles/Raw_larval_abundance_and_environmental_data_for_Thompson_et_al_from_Larval_abundances_of_rockfishes_that_were_historically_targeted_by_fishing_increased_over_16_years_in_association_with_a_large_marine_protected_area/5394619) Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.There are about 10,000 pieces of data in the raw data set. Some of the descriptive factors were not needed for the analysis and were cut out using dplyr. A new column was added using knitr to combine species into a genus column. The new data set is shown here: 
+
+## Overview on Data
+
 -A total of 16 years of data collected along Californian Coast.
 
 
@@ -37,14 +46,6 @@ library(tidyr)
 -Rockfish abundance increased after implementation of large MPA. 
 
 ![.](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=60%}
-
-## Importing Packages
-dplyr, ggplot2, tidyr
-
-
-
-## Manipulation on Raw Data 
-Raw data orginally came from [Raw larval abundance and environmental data for Thompson et al.](https://figshare.com/articles/Raw_larval_abundance_and_environmental_data_for_Thompson_et_al_from_Larval_abundances_of_rockfishes_that_were_historically_targeted_by_fishing_increased_over_16_years_in_association_with_a_large_marine_protected_area/5394619) Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.There are about 10,000 pieces of data in the raw data set. Some of the descriptive factors were not needed for the analysis and were cut out using dplyr. A new column was added using knitr to combine species into a genus column. The new data set is shown here: 
 
 
 

@@ -92,7 +92,7 @@ knitr::kable(
     
     -salinities ![](https://images.wagwalkingweb.com/media/articles/dog/salt-poisoning/salt-poisoning.jpg){width=15%}
     
-    -oxygen concentration ![](https://visualisingdata.com/wp-content/uploads/2010/03/O2-bubbles.jpg){width=15%}
+    -oxygen concentrations ![](https://visualisingdata.com/wp-content/uploads/2010/03/O2-bubbles.jpg){width=15%}
 
 
 

@@ -60,16 +60,22 @@ library(kableExtra)
 The new data set is shown here: 
 ```{r raw_data}
 rockfish_larval_data <- read.csv("../data/rsos170639_si_001.csv")
+
+#downloading the raw data
 ```
 
 
 ```{r}
 rockfish_data_reduced <- select(rockfish_larval_data, year, line, station, station.depth, temp_surf, sal_surf, oxygen_surf, temp_100m, sal_100m, oxygen_100m, auriculatus, aurora,	caurinus,	chlorostictus,	constellatus,crameri,	crocotulus,	dalli,	did.not.work,	diploproa,	elongatus,	ensifer,	entomelas,	flavidus,	gilli,	goodei, helvomaculatus,	hopkinsi,	jordani,	levis,	macdonaldi,	melanostomus,	miniatus,	moseri,	mystinus,	ovalis,	paucispinis)
+
+#selecting the specific columns I want for my revised data
 ```
 
 ```{r}
 rockfish_data_added_genus <- rockfish_data_reduced %>%
   gather('auriculatus', 'aurora',	'caurinus',	'chlorostictus',	'constellatus', 'crameri',	'crocotulus',	'dalli',	'did.not.work',	'diploproa',	'elongatus',	'ensifer',	'entomelas',	'flavidus',	'gilli',	'goodei', 'helvomaculatus',	'hopkinsi',	'jordani',	'levis',	'macdonaldi',	'melanostomus',	'miniatus',	'moseri',	'mystinus',	'ovalis',	'paucispinis', key = "genus", value = "counts")
+
+#combining all of the species columns into one new column called genus
 ```
 
 
@@ -80,6 +86,8 @@ knitr::kable(
 ) %>%
   kable_styling(c("striped", "hover", "condensed", "responsive")) %>%
   scroll_box(width = "100%")
+
+#making a pretty table for the slide show, incorporating the first 7 rows and the latter columns that I used in my analysis
 ```
 
 
@@ -102,11 +110,15 @@ knitr::kable(
 
 ## Rockfish at Surface Temp and Temp at 100m
 ```{r}
-ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
+temp_histograms <- ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    geom_histogram(fill="red", alpha = 0.3, bins = 50) +
    labs(x = "Temp (C)") +
   facet_wrap(~genus) +
   geom_histogram(aes(x=temp_100m), fill="blue", alpha = 0.3, bins = 50) 
+
+ggsave ("../figures/temp_histograms.jpg")
+
+#first histogram overlapping surface temp and 100 m temp with all species  
 ```
 Blue: 100 meters deep
 Red: surface 
@@ -120,6 +132,9 @@ ggplot(rockfish_data_added_genus, aes(x=sal_surf)) +
    labs(x = "Salinity") +
    facet_wrap(~genus) +
   geom_histogram(aes(x=sal_100m), fill="blue", alpha = 0.3, bins = 50)
+
+#second histogram overlapping surface salinity and 100 m salinty with all species  
+
 ```
 
 
@@ -130,6 +145,9 @@ ggplot(rockfish_data_added_genus, aes(x=oxygen_surf)) +
    labs(x = "Oxygen") +
    facet_wrap(~genus) +
   geom_histogram(aes(x=oxygen_100m), fill="blue", alpha = 0.3, bins = 50)
+
+#third histogram overlapping surface O2 and 100 m O2 with all species  
+
 ```
 
 ## The Code for Histograms 

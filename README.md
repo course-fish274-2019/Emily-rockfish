@@ -27,8 +27,17 @@ Files in Order of Use:
 8. .gitignore -- files that aren't getting pushed, not important
 
 
+<<<<<<< HEAD
 Plan
 1. Import raw data and manipulate table in a way to make data tidy. 
 2. Create graphs or plots that show rockfish larval abundance in relation to environmental factors. 
 3. Combine prose, images, and graphs in a presentation with slides. 
 4. Make sure slide show follows rubric guidelines. 
+=======
+Files in use of order:
+
+put your scripts/data/figures/etc. 
+
+
+
+>>>>>>> 7d06d72206a65f06bb39b3225dd5463e3f49c438

@@ -147,7 +147,7 @@ ggplot(rockfish_data_added_genus, aes(x=sal_surf)) +
 ```{r}
 ggplot(rockfish_data_added_genus, aes(x=oxygen_surf)) +
    geom_histogram(fill="red", alpha = 0.3, bins = 50) +
-   labs(x = "Oxygen") +
+   labs(x = "Dissolved Oxygen Concentration") +
    facet_wrap(~genus) +
   geom_histogram(aes(x=oxygen_100m), fill="blue", alpha = 0.3, bins = 50)
 

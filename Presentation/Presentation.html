@@ -3156,9 +3156,17 @@ slide:not(.current) .plotly.html-widget{
 
 </article></slide><slide class=""><hgroup><h2>Raw Data/Manipulation</h2></hgroup><article  id="raw-datamanipulation">
 
-<p>Raw data orginally came from <a href='https://figshare.com/articles/Raw_larval_abundance_and_environmental_data_for_Thompson_et_al_from_Larval_abundances_of_rockfishes_that_were_historically_targeted_by_fishing_increased_over_16_years_in_association_with_a_large_marine_protected_area/5394619' title=''>Raw larval abundance and environmental data for Thompson et al.</a> Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.There are about 10,000 pieces of data in the raw data set. Some of the descriptive factors were not needed for the analysis and were cut out using dplyr. A new column was added using knitr to combine species into a genus column. The new data set is shown here:</p>
+<ol>
+<li>Raw data orginally came from <a href='https://figshare.com/articles/Raw_larval_abundance_and_environmental_data_for_Thompson_et_al_from_Larval_abundances_of_rockfishes_that_were_historically_targeted_by_fishing_increased_over_16_years_in_association_with_a_large_marine_protected_area/5394619' title=''>Raw larval abundance and environmental data for Thompson et al.</a></li>
+<li>Raw data includes 27 rockfish speices and 23 environmental/descriptive factors.</li>
+<li>There are about 10,000 pieces of data in the raw data set.</li>
+<li>Some of the descriptive factors were not needed for the analysis and were cut out using dplyr.</li>
+<li>A new column was added using knitr to combine species into a genus column.</li>
+</ol>
 
 </article></slide><slide class=""><hgroup><h2>Data Table</h2></hgroup><article  id="data-table">
+
+<p>The new data set is shown here:</p>
 
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 
@@ -3173,30 +3181,6 @@ Rockfish Data Table
 <thead>
 
 <tr>
-
-<th style="text-align:right;">
-
-year
-
-</th>
-
-<th style="text-align:right;">
-
-line
-
-</th>
-
-<th style="text-align:right;">
-
-station
-
-</th>
-
-<th style="text-align:right;">
-
-station.depth
-
-</th>
 
 <th style="text-align:right;">
 
@@ -3240,12 +3224,6 @@ genus
 
 </th>
 
-<th style="text-align:right;">
-
-counts
-
-</th>
-
 </tr>
 
 </thead>
@@ -3253,30 +3231,6 @@ counts
 <tbody>
 
 <tr>
-
-<td style="text-align:right;">
-
-1998
-
-</td>
-
-<td style="text-align:right;">
-
-93.3
-
-</td>
-
-<td style="text-align:right;">
-
-26.7
-
-</td>
-
-<td style="text-align:right;">
-
-197
-
-</td>
 
 <td style="text-align:right;">
 
@@ -3320,39 +3274,9 @@ auriculatus
 
 </td>
 
-<td style="text-align:right;">
-
-0
-
-</td>
-
 </tr>
 
 <tr>
-
-<td style="text-align:right;">
-
-1998
-
-</td>
-
-<td style="text-align:right;">
-
-93.3
-
-</td>
-
-<td style="text-align:right;">
-
-28.0
-
-</td>
-
-<td style="text-align:right;">
-
-638
-
-</td>
 
 <td style="text-align:right;">
 
@@ -3396,39 +3320,9 @@ auriculatus
 
 </td>
 
-<td style="text-align:right;">
-
-0
-
-</td>
-
 </tr>
 
 <tr>
-
-<td style="text-align:right;">
-
-1998
-
-</td>
-
-<td style="text-align:right;">
-
-90.0
-
-</td>
-
-<td style="text-align:right;">
-
-60.0
-
-</td>
-
-<td style="text-align:right;">
-
-840
-
-</td>
 
 <td style="text-align:right;">
 
@@ -3472,39 +3366,9 @@ auriculatus
 
 </td>
 
-<td style="text-align:right;">
-
-0
-
-</td>
-
 </tr>
 
 <tr>
-
-<td style="text-align:right;">
-
-1998
-
-</td>
-
-<td style="text-align:right;">
-
-90.0
-
-</td>
-
-<td style="text-align:right;">
-
-53.0
-
-</td>
-
-<td style="text-align:right;">
-
-1328
-
-</td>
 
 <td style="text-align:right;">
 
@@ -3548,39 +3412,9 @@ auriculatus
 
 </td>
 
-<td style="text-align:right;">
-
-0
-
-</td>
-
 </tr>
 
 <tr>
-
-<td style="text-align:right;">
-
-1998
-
-</td>
-
-<td style="text-align:right;">
-
-90.0
-
-</td>
-
-<td style="text-align:right;">
-
-45.0
-
-</td>
-
-<td style="text-align:right;">
-
-1713
-
-</td>
 
 <td style="text-align:right;">
 
@@ -3624,9 +3458,95 @@ auriculatus
 
 </td>
 
+</tr>
+
+<tr>
+
 <td style="text-align:right;">
 
-0
+16.57667
+
+</td>
+
+<td style="text-align:right;">
+
+33.69933
+
+</td>
+
+<td style="text-align:right;">
+
+5.630
+
+</td>
+
+<td style="text-align:right;">
+
+15.95533
+
+</td>
+
+<td style="text-align:right;">
+
+33.64647
+
+</td>
+
+<td style="text-align:right;">
+
+5.435000
+
+</td>
+
+<td style="text-align:left;">
+
+auriculatus
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:right;">
+
+17.21333
+
+</td>
+
+<td style="text-align:right;">
+
+33.87300
+
+</td>
+
+<td style="text-align:right;">
+
+5.520
+
+</td>
+
+<td style="text-align:right;">
+
+16.32143
+
+</td>
+
+<td style="text-align:right;">
+
+33.76943
+
+</td>
+
+<td style="text-align:right;">
+
+5.182308
+
+</td>
+
+<td style="text-align:left;">
+
+auriculatus
 
 </td>
 
@@ -3669,6 +3589,14 @@ auriculatus
 <p>ggplot(rockfish_data_added_genus, aes(x=temp_surf)) + geom_histogram(fill=&ldquo;red&rdquo;, alpha = 0.3, bins = 50) + labs(x = &ldquo;Temp (C)&rdquo;) + facet_wrap(~genus) + geom_histogram(aes(x=temp_100m), fill=&ldquo;blue&rdquo;, alpha = 0.3, bins = 50)</p>
 
 <img width="55%" src='https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg' title=''/>
+
+</article></slide><slide class=""><hgroup><h2>Why do we care about this info?</h2></hgroup><article  id="why-do-we-care-about-this-info">
+
+<p>-interesting to see what environmental factors affect abundance</p>
+
+<p>-interesting to compare abundances with two variences of an environmental factor</p>
+
+<p>-possibly applicable to what types of fishing methods should be used in areas with rockfish spawning</p>
 
 </article></slide><slide class=""><hgroup><h2>Thank you!</h2></hgroup><article  id="thank-you">
 

@@ -20,24 +20,25 @@ Files in Order of Use:
 
 5. data/rsos170639_si_001.csv - this file contains raw data about larval fish abundance and envornmental conditions 
 
-6. Emily-rockfish.Rproj - metadata about this project
+6. figures/rockfish_temp_histogram - histogram of rockfish larval abundance at surface temp and 100 meter temp
 
-7. .RHistory - history of changes I have made to the project 
+7. figures/rockfish_salinity_histogram - histogram of rockfish larval abundance at surface salinity and 100 meter salinty
 
-8. .gitignore -- files that aren't getting pushed, not important
+8. figures/rockfish_oxygen_histogram - histogram of rockfish larval abundance at surface [O2] and 100 meter [O2]
+
+9. Emily-rockfish.Rproj - metadata about this project
+
+10. .RHistory - history of changes I have made to the project 
+
+11. .gitignore -- files that aren't getting pushed, not important
 
 
-<<<<<<< HEAD
+
 Plan
 1. Import raw data and manipulate table in a way to make data tidy. 
 2. Create graphs or plots that show rockfish larval abundance in relation to environmental factors. 
 3. Combine prose, images, and graphs in a presentation with slides. 
 4. Make sure slide show follows rubric guidelines. 
-=======
-Files in use of order:
-
-put your scripts/data/figures/etc. 
+ 
 
 
-
->>>>>>> 7d06d72206a65f06bb39b3225dd5463e3f49c438

@@ -116,8 +116,6 @@ temp_histograms <- ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
   facet_wrap(~genus) +
   geom_histogram(aes(x=temp_100m), fill="blue", alpha = 0.3, bins = 50) 
 
-ggsave ("../figures/temp_histograms.jpg")
-
 #first histogram overlapping surface temp and 100 m temp with all species  
 ```
 Blue: 100 meters deep

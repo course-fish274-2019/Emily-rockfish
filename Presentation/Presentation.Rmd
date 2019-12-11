@@ -86,11 +86,11 @@ knitr::kable(
 
 
 ## Overview on Data
-~A total of 16 years of data collected along Californian Coast.
+* A total of 16 years of data collected along Californian Coast.
 
-~Rockfish were historically targeted by fishing for many years. 
+* Rockfish were historically targeted by fishing for many years. 
 
-~Environmental factors consist of 
+* Environmental factors consist of 
 
     -temperatures ![](https://scx1.b-cdn.net/csz/news/800/2018/temperature.jpg){width=15%}
     
@@ -107,7 +107,6 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    labs(x = "Temp (C)") +
   facet_wrap(~genus) +
   geom_histogram(aes(x=temp_100m), fill="blue", alpha = 0.3, bins = 50) 
-
 ```
 Blue: 100 meters deep
 Red: surface 
@@ -145,11 +144,16 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 ![](https://caseagrant.ucsd.edu/sites/default/files/Vermilion-Rockfish-king.jpg){width=55%} 
 
 ## Why do we care about this info?
--interesting to see what environmental factors affect abundance 
+* larval abundance was evenely distributed between suface and deeper temperatures
 
--interesting to compare abundances with two variences of an environmental factor 
+* salinity did not change at surface and deeper depths
 
--possibly applicable to what types of fishing methods should be used in areas with rockfish spawning
+* larval abundance was unevenely distributed between different oxygen concentrations 
+
+* with this knowledge of larval abundance at different environmental conditions we could potentially 
+  + farm rockfish in better conditions
+  + avoid areas of high larval abundance 
+
 
 ## Thank you!
 ### Any Questions? 

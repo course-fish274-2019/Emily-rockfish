@@ -16,6 +16,8 @@ output: ioslides_presentation
 knitr::opts_chunk$set(
   echo=FALSE
 )
+
+#this makes my code invisible when I knit it to html
 ```
 
 ## Importing Packages
@@ -31,6 +33,8 @@ knitr::opts_chunk$set(
 knitr::opts_chunk$set(
   echo=FALSE
 )
+
+#i made the code invisible again 
 ```
 
 ```{r, include=FALSE}
@@ -39,11 +43,14 @@ help(package = dplyr)
 library(ggplot2)
 library(tidyr)
 
+#loading my packages
 ```
 
 ```{r}
 
 library(kableExtra)
+
+#need one more package to make my table scroll so you can see the whole thing 
 ```
 
 

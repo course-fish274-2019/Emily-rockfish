@@ -110,7 +110,7 @@ knitr::kable(
 
 ## Rockfish at Surface Temp and Temp at 100m
 ```{r}
-temp_histograms <- ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
+ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
    geom_histogram(fill="red", alpha = 0.3, bins = 50) +
    labs(x = "Temp (C)") +
   facet_wrap(~genus) +

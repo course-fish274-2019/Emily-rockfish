@@ -152,7 +152,7 @@ ggplot(rockfish_data_added_genus, aes(x=temp_surf)) +
 
 * with this knowledge of larval abundance at different environmental conditions we could potentially 
   + farm rockfish in better conditions
-  + avoid areas of high larval abundance 
+  + avoid areas of high larval abundance when fishing 
 
 
 ## Thank you!
